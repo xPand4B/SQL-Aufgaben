@@ -6,7 +6,7 @@ class Database{
     private $host       = 'localhost';
     private $user       = 'root';
     private $password   = '';
-    private $db_name    = 'BKR_Videoverleih';
+    private $db_name    = '';
     private $conn;
 
 
