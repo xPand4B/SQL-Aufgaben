@@ -5,6 +5,7 @@ Eine weitere Version mit einer dynamischen Inkludierung folgt.
 
 
 ## Wie fange ich an?
+* Datenbankeverbindung unter __database.php__ angeben
 * Datenbank importieren (in meinem Fall unter __00-database/videoverleih.sql__)
 * Meine bisherigen Aufgaben sind unter __pages/aggregatfunktionen/__ zu finden
 
