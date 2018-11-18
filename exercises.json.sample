@@ -1,0 +1,32 @@
+[
+    {
+        "topic"     : "Sample",
+        "date"      : "18.11.2018",
+        "database"  : "",
+        "data":[
+            {
+                "exercise"  : "Create a SQL Query.",
+                "tableHead" :[
+                    "Column 1", "Column 2"
+                ],
+                "query"     : [
+                    "SELECT column_1, column_2",
+                    "FROM table_1, table_2",
+                    "WHERE table_1.ID = table_2.ID"
+                ]
+            },
+            
+            {
+                "exercise"  : "Create a second SQL Query.",
+                "tableHead" :[
+                    "Column 1", "Column 2"
+                ],
+                "query"     : [
+                    "SELECT column_1, column_2",
+                    "FROM table_1, table_2",
+                    "WHERE table_1.ID = table_2.ID"
+                ]
+            }
+        ]
+    }
+]
