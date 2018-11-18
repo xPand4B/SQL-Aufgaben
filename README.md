@@ -1,22 +1,17 @@
-# SQL Aufgaben v1.0
+# SQL Aufgaben v2.0
 Eine kleine Web-Anwendung, um seine SQL Aufgaben an einer Stelle zu verwalten.
-
-Eine weitere Version mit einer dynamischen Inkludierung folgt.
 
 
 ## Wie fange ich an?
-* Datenbankeverbindung unter __database.php__ angeben
-* Datenbank importieren (in meinem Fall unter __00-database/videoverleih.sql__)
-* Meine bisherigen Aufgaben sind unter __pages/aggregatfunktionen/__ zu finden
+* Composer auf dem Rechner installieren
+    * Innerhalb des __src__ Ordners:
+        ```
+        composer install
+        ```
+* __.env.sample__ kopieren und in __.env__ umbenennen
+* Datenbankverbindung unter __.env__ angeben
+* __exercises.json.clean__ kopieren und in __exercises.json__ umbennen
 
-Um seine eigenen Aufgaben zu ergänzen gibt es unter __pages/sample/__ eine vorlage, welche alles notwendige beinhaltet.
-
-Zu beachten ist nur, dass die Dateien, welche die Aufgaben enthalten, folgendem Schema entprechen:
-
-* __aufgabeXY.php__
-
-
-# Dependencie
-* jQuery
-* Bootstrap
-* popper.js
+## Wie füge ich Aufgaben hinzu?
+* Ein Beispiel zum hinzufügen von Aufgaben liegt im __root__ Verzeichnis unter __.exercises.json.sample__
+* Eine Auflistung aller möglichen Felder ist im __root__ Verzeichnis unter __.exercises.json.clean__ zu finden
