@@ -11,8 +11,6 @@ use App\FileSystem\JSONDecoder as Decoder;
 
 class JSONData extends Decoder
 {
-    private $position;
-
     /**
      * Call App\FileSystem\JSONDecoder::__construct Method
      */
@@ -21,8 +19,6 @@ class JSONData extends Decoder
         parent::__construct(
             "../../exercises.json"
         );
-
-        $this->position = array_search($_GET['url'], $this->Topics());
     }
 
     /**
@@ -42,8 +38,10 @@ class JSONData extends Decoder
      */
     public function Dates(): string
     {
-        if($this->dates[$this->position]){
-            return $this->dates[$this->position];
+        $position = array_search($_GET['url'], $this->Topics());
+
+        if($this->dates[$position]){
+            return $this->dates[$position];
         }else{
             return '';
         }
@@ -62,7 +60,9 @@ class JSONData extends Decoder
     
     public function CurrentDatabase(): string
     {
-        return $this->Databases()[$this->position];
+        $position = array_search($_GET['url'], $this->Topics());
+
+        return $this->Databases()[$position];
     }
 
     /**
