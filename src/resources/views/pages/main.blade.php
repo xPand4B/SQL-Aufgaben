@@ -2,7 +2,7 @@
 
 @section('title')
     @if (isset($_GET['url']))
-        | {{ ucfirst(strtolower($_GET['url'])) }}
+        | {{ $_GET['url'] }}
     @endif
 @endsection
 
