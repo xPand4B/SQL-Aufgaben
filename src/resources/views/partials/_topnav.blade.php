@@ -22,7 +22,7 @@
                     @if (isset($_GET['url']) && strtolower($_GET['url']) == strtolower($topic))
                         <li class="nav-item active dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ ucfirst(strtolower($topic)) }}
+                                    {{ $topic }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labeldby="navbarDropdown">
                                 @if (!empty($date))
@@ -47,8 +47,8 @@
                         </li>
                     @else
                         <li class="nav-item">
-                            <a href="{{ ucfirst(strtolower($topic)) }}" class="nav-link">
-                                {{ ucfirst(strtolower($topic)) }}
+                            <a href="{{ $topic }}" class="nav-link">
+                                {{ $topic }}
                             </a>
                         </li>
                     @endif
