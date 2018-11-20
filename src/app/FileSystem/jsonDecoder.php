@@ -62,7 +62,7 @@ class JSONDecoder
 
         // Loop for each topic
         for($i = 0; $i < sizeof($jsonIterator); $i++){
-            array_push($this->topics,    $jsonIterator[$i]['topic']);
+            array_push($this->topics,    ucfirst(strtolower($jsonIterator[$i]['topic'])));
             array_push($this->databases, $jsonIterator[$i]['database']);
             
             if(array_key_exists('date', $jsonIterator[$i])){
