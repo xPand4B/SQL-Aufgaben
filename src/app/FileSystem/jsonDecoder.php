@@ -90,6 +90,7 @@ class JSONDecoder
                 for($k = 0; $k < sizeof($jsonIterator[$i]['data'][$j]['query']); $k++){
                     $query .= $jsonIterator[$i]['data'][$j]['query'][$k] . ' ';
                 }
+                // $query = str_replace("'", '"', $query);
                 array_push($this->queries[$i],    $query);
             }
         }
