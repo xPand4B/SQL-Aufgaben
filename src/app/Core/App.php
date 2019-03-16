@@ -43,7 +43,7 @@ class App
         // Check if there is a valid topic parameter inside the url
         if($this->IsValidUrlParameter()){
             // Get array positon for current topic
-            $position = array_search($_GET['url'], $this->JSON->Topics());
+            $position = \array_search($_GET['url'], $this->JSON->Topics());
 
             $this->DB = new Database(
                 $this->JSON->CurrentDatabase(),
@@ -52,7 +52,7 @@ class App
 
             View::render('pages.main', [
                 'topics'        => $this->JSON->Topics(),
-                'date'         => $this->JSON->Dates(),
+                'date'          => $this->JSON->Dates(),
                 'exercises'     => $this->JSON->Exercises()[$position],
                 'exerciseCount' => $this->JSON->ExerciseCount()[$position],
                 'tableHeads'    => $this->JSON->TableHeads()[$position],

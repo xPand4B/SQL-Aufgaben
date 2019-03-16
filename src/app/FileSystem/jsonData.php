@@ -38,7 +38,7 @@ class JSONData extends Decoder
      */
     public function Dates(): string
     {
-        $position = array_search($_GET['url'], $this->Topics());
+        $position = \array_search($_GET['url'], $this->Topics());
 
         if($this->dates[$position]){
             return $this->dates[$position];
@@ -60,7 +60,7 @@ class JSONData extends Decoder
     
     public function CurrentDatabase(): string
     {
-        $position = array_search($_GET['url'], $this->Topics());
+        $position = \array_search($_GET['url'], $this->Topics());
 
         return $this->Databases()[$position];
     }

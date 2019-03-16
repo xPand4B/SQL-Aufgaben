@@ -42,7 +42,7 @@ class Database extends ConnectionHandler
     private function RunQueries(array $queries): void
     {
         foreach($queries as $query){
-            array_push($this->results, QueryManager::GetResult($this->conn, $query));
+            \array_push($this->results, QueryManager::GetResult($this->conn, $query));
         }
     }
 

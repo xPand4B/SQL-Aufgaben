@@ -27,14 +27,14 @@ class ConnectionHandler
     {
         $this->GetConnectionData();
 
-        $this->conn = mysqli_connect(
+        $this->conn = \mysqli_connect(
             $this->DB_DATA['host'],
             $this->DB_DATA['username'],
             $this->DB_DATA['password']
         );
 
         if(!$this->conn){
-            die("<br>Connection failed: " . mysqli_connect_error());
+            die("<br>Connection failed: " . \mysqli_connect_error());
         }
     }
 
@@ -46,9 +46,9 @@ class ConnectionHandler
     private function GetConnectionData(): void
     {
         $this->DB_DATA = [
-            'host'      => env('DB_HOST'),
-            'username'  => env('DB_USERNAME'),
-            'password'  => env('DB_PASSWORD')
+            'host'      => \env('DB_HOST'),
+            'username'  => \env('DB_USERNAME'),
+            'password'  => \env('DB_PASSWORD')
         ];
     }  
 
@@ -62,7 +62,7 @@ class ConnectionHandler
     protected function SelectDatabase(string $db_name)
     {
         $query = "USE " . $db_name;
-        if(!mysqli_query($this->conn, $query)){
+        if(!\mysqli_query($this->conn, $query)){
             // die('<br>Connection failed: Database "' . $db_name . '" could not be found.');
             ?>
             <script>
@@ -83,6 +83,6 @@ class ConnectionHandler
      */
     protected function DBClose(): void
     {
-        mysqli_close($this->conn);
+        \mysqli_close($this->conn);
     }
 }

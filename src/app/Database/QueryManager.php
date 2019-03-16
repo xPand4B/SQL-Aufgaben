@@ -23,11 +23,11 @@ class QueryManager
             return null;
         }
 
-        $result = mysqli_query($conn, $query);
+        $result = \mysqli_query($conn, $query);
         $output = [];
 
-        while($row = mysqli_fetch_row($result)){
-            array_push($output, $row);
+        while($row = \mysqli_fetch_row($result)){
+            \array_push($output, $row);
         }
 
         return $output;
