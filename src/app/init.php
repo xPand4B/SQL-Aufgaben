@@ -6,5 +6,5 @@ ini_set('display_errors', 1);
 require_once __DIR__.'/../vendor/autoload.php';
 
 // Load .env file as environment variable
-$dotenv = new Dotenv\Dotenv(__DIR__.'/../../');
+$dotenv = Dotenv\Dotenv::create(__DIR__.'/../../');
 $dotenv->load();
