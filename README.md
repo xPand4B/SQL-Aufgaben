@@ -6,7 +6,7 @@ Eine kleine Web-Anwendung, um seine SQL Aufgaben an einer Stelle zu verwalten.
 * Composer auf dem Rechner installieren
     * Innerhalb des __src__ Ordners:
         ```
-        composer install
+        composer install --no-dev -a
         ```
 * __.env.sample__ kopieren und in __.env__ umbenennen
 * Datenbankverbindung unter __.env__ angeben
