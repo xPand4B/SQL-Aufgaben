@@ -1,7 +1,7 @@
 {
-    "name": "SQL-Aufgaben",
+    "name": "xPand4B/SQL-Aufgaben",
     "description": "Eine kleine Web-Anwendung, um seine SQL Aufgaben an einer Stelle zu verwalten.",
-    "keywords": ["sql", "php", "mvc"],
+    "keywords": ["sql", "php", "mvc", "oop"],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -11,6 +11,9 @@
     "autoload":{
         "psr-4": {
             "App\\": "app/"
-        }        
+        },
+        "files" :[
+            "app/Core/helpers.php"
+        ]
     }
 }
